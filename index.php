@@ -42,6 +42,7 @@ if(isset($_POST["message"])){
 
 	for ($i=0; $i < $size; $i++) {
 		$message = preg_replace("/(".$name[$i].")\n(\d+-\d+-\d+ \d+:\d+)\n".$name[$i]."\n/", "($2) $1 ", $message);
+		$message = preg_replace("/(".$name[$i].")\n(\d+:\d+(?:a|p)m)\n".$name[$i]."\n/", "($2) $1 ", $message);
 		$message = preg_replace("/(".$name[$i].")\n(\d+:\d+)\n".$name[$i]."\n/", "($2) $1 ", $message);
 		$message = preg_replace("/(\d+-\d+-\d+)(".$name[$i].")/", "($1) $2", $message);
 	}
