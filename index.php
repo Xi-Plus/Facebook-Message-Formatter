@@ -87,7 +87,7 @@ if(isset($_POST["message"])){
 	</div>
 	<div style="float: left;">
 		<input type="submit" value="format"> output<br>
-		<textarea name="message" rows="20" cols="60" disabled><?php
+		<textarea name="message" rows="20" cols="60" readonly><?php
 			echo $message;
 		?></textarea>
 	</div>
